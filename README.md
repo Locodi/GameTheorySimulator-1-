@@ -1,4 +1,7 @@
 # GameTheorySimulator
+
+Made by: Alexandru Martin Locodi<br />
+License: CC-BY<br />
 This is the simulator and the data used for paper 1.<br />
 To see the most up to date version of the simulator go here: https://github.com/Locodi/GameTheorySimulator-Master
 ## Table of Contents 
