@@ -81,9 +81,9 @@ public class AdvanceSimulator_FullSimulationControler {
     public void initialize() throws IOException {
 		
 		// initialize input
-		numberOfRepeats=800; 
-		numberOfMaxTurns=10000; 
-		stepSize=756;
+		numberOfRepeats=1000; 
+		numberOfMaxTurns=1000; 
+		stepSize=1;
 		rangeStart=0;
 		
 		numberOfNodes=0;
@@ -663,8 +663,7 @@ public class AdvanceSimulator_FullSimulationControler {
 	
 	public int playGame(int maxNumberOfTurns, int maxNoChange)
 	{	
-		int changeCounter = 0;
-		int largeChangeCooperatorCounter=0;
+		int changeCounter = 0;		
 		
 		for(int t = 0; t<maxNumberOfTurns;t++)
 		{
@@ -701,29 +700,8 @@ public class AdvanceSimulator_FullSimulationControler {
 			{				
 				nodes.get(i).calculateNextPayoff(payoff_T, payoff_R, payoff_P, payoff_S);
 				nodes.get(i).updateCurrentPayoff();				
-			}
+			}			
 			
-			if(t%100==0)
-			{
-				int currentNumberOfCooperators=0;
-				for(int i = 0; i<numberOfNodes; i++)
-				{						
-					if(nodes.get(i).getCurrentDefect()!= true)
-						currentNumberOfCooperators ++;
-				}
-				if(t<=100)
-					largeChangeCooperatorCounter=currentNumberOfCooperators;
-				else
-					{
-						if(currentNumberOfCooperators-10 <= largeChangeCooperatorCounter && largeChangeCooperatorCounter<=currentNumberOfCooperators+10)
-							{									
-								return 2; // no big change over long time									
-							}
-						
-						largeChangeCooperatorCounter=currentNumberOfCooperators;
-					}
-				
-			}
 		}
 		return 0; //Reached maxTurns
 	}

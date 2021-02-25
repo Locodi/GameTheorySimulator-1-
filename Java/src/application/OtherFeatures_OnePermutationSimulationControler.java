@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 /*
  * Goes over all connected graphs of 6 nodes and looks at every possible permutation of 
- * one initial defector and stores the averege result of several runs
+ * one initial defector and stores the average result of several runs
  */
 
 public class OtherFeatures_OnePermutationSimulationControler {
