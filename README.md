@@ -1,5 +1,6 @@
 # GameTheorySimulator
-This branch contains the simulator and data used for the following paper: TBD
+Here we have the simulator and the data used for paper 1.
+To see the most up to date version of the simulator go here: https://github.com/Locodi/GameTheorySimulator-Master
 ## Table of Contents 
 
 - [Data](#data)
